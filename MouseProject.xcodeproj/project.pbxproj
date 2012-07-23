@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		37359FB115BCE70D001C80C0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37359FB015BCE70D001C80C0 /* libz.dylib */; };
 		37359FB315BCE7E0001C80C0 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */; };
-		37359FB615BD0C42001C80C0 /* foreground2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FB415BD0C42001C80C0 /* foreground2.plist */; };
-		37359FB715BD0C42001C80C0 /* foreground2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FB515BD0C42001C80C0 /* foreground2.png */; };
+		37359FD015BD3A19001C80C0 /* foregroundTP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCE15BD3A19001C80C0 /* foregroundTP.plist */; };
+		37359FD115BD3A19001C80C0 /* foregroundTP.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCF15BD3A19001C80C0 /* foregroundTP.png */; };
 		37DF1FD815B968AD00C5D86A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD715B968AD00C5D86A /* QuartzCore.framework */; };
 		37DF1FDA15B968AD00C5D86A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD915B968AD00C5D86A /* OpenGLES.framework */; };
 		37DF1FDC15B968AD00C5D86A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FDB15B968AD00C5D86A /* OpenAL.framework */; };
@@ -141,8 +141,8 @@
 		37359FA715BCE458001C80C0 /* Cocos_2D_LibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cocos_2D_LibTests.m; sourceTree = "<group>"; };
 		37359FB015BCE70D001C80C0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d libraries.a"; path = "../../../../Downloads/WhackAMole/libcocos2d libraries.a"; sourceTree = "<group>"; };
-		37359FB415BD0C42001C80C0 /* foreground2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = foreground2.plist; path = Resources/Art/foreground/foreground2.plist; sourceTree = "<group>"; };
-		37359FB515BD0C42001C80C0 /* foreground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foreground2.png; path = Resources/Art/foreground/foreground2.png; sourceTree = "<group>"; };
+		37359FCE15BD3A19001C80C0 /* foregroundTP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = foregroundTP.plist; path = Resources/Art/foreground/foregroundTP.plist; sourceTree = "<group>"; };
+		37359FCF15BD3A19001C80C0 /* foregroundTP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foregroundTP.png; path = Resources/Art/foreground/foregroundTP.png; sourceTree = "<group>"; };
 		37DF1FD315B968AD00C5D86A /* MouseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MouseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DF1FD715B968AD00C5D86A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		37DF1FD915B968AD00C5D86A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -497,10 +497,10 @@
 		37DF1FE815B968AD00C5D86A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37359FCE15BD3A19001C80C0 /* foregroundTP.plist */,
+				37359FCF15BD3A19001C80C0 /* foregroundTP.png */,
 				37DF217015BCD34700C5D86A /* background.plist */,
 				37DF217115BCD34800C5D86A /* background.pvr.ccz */,
-				37359FB415BD0C42001C80C0 /* foreground2.plist */,
-				37359FB515BD0C42001C80C0 /* foreground2.png */,
 				37DF1FE915B968AD00C5D86A /* Default.png */,
 				37DF1FEB15B968AD00C5D86A /* fps_images.png */,
 				37DF1FED15B968AD00C5D86A /* Icon-72.png */,
@@ -887,8 +887,8 @@
 				37DF1FFB15B968AD00C5D86A /* iTunesArtwork in Resources */,
 				37DF217215BCD34800C5D86A /* background.plist in Resources */,
 				37DF217315BCD34800C5D86A /* background.pvr.ccz in Resources */,
-				37359FB615BD0C42001C80C0 /* foreground2.plist in Resources */,
-				37359FB715BD0C42001C80C0 /* foreground2.png in Resources */,
+				37359FD015BD3A19001C80C0 /* foregroundTP.plist in Resources */,
+				37359FD115BD3A19001C80C0 /* foregroundTP.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

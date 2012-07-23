@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>grass_lower.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2,2},{1024,384}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{1024,384}}</string>
+			<key>sourceSize</key>
+			<string>{1024,384}</string>
+		</dict>
+		<key>grass_upper.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2,388},{1024,384}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{1024,384}}</string>
+			<key>sourceSize</key>
+			<string>{1024,384}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>realTextureFileName</key>
+		<string>foregroundTP.png</string>
+		<key>size</key>
+		<string>{2048,1024}</string>
+		<key>smartupdate</key>
+		<string>$TexturePacker:SmartUpdate:5913edd2761ea6ad9d1123809f46d2ab$</string>
+		<key>textureFileName</key>
+		<string>foregroundTP.png</string>
+	</dict>
+</dict>
+</plist>
