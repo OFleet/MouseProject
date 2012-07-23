@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>mole_1</key>
+		<dict>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {178, 200}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>spriteSize</key>
+			<string>{178, 200}</string>
+			<key>spriteSourceSize</key>
+			<string>{178, 200}</string>
+			<key>spriteTrimmed</key>
+			<false/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {178, 200}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>mole_laugh1</key>
+		<dict>
+			<key>spriteColorRect</key>
+			<string>{{184, 0}, {178, 200}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>spriteSize</key>
+			<string>{178, 200}</string>
+			<key>spriteSourceSize</key>
+			<string>{178, 200}</string>
+			<key>spriteTrimmed</key>
+			<false/>
+			<key>textureRect</key>
+			<string>{{184, 0}, {178, 200}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>mole_laugh2</key>
+		<dict>
+			<key>spriteColorRect</key>
+			<string>{{0, 206}, {178, 200}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>spriteSize</key>
+			<string>{178, 200}</string>
+			<key>spriteSourceSize</key>
+			<string>{178, 200}</string>
+			<key>spriteTrimmed</key>
+			<false/>
+			<key>textureRect</key>
+			<string>{{0, 206}, {178, 200}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>mole_laugh3</key>
+		<dict>
+			<key>spriteColorRect</key>
+			<string>{{184, 206}, {178, 200}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>spriteSize</key>
+			<string>{178, 200}</string>
+			<key>spriteSourceSize</key>
+			<string>{178, 200}</string>
+			<key>spriteTrimmed</key>
+			<false/>
+			<key>textureRect</key>
+			<string>{{184, 206}, {178, 200}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>AnimationName</key>
+		<string>mole_laugh</string>
+		<key>GeneratedWith</key>
+		<string>SpriteHelper</string>
+		<key>animationLoop</key>
+		<false/>
+		<key>animationRepetitions</key>
+		<integer>1</integer>
+		<key>animationSpeed</key>
+		<real>0.10000000149011612</real>
+		<key>animationStartAtLaunch</key>
+		<true/>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+	</dict>
+</dict>
+</plist>
