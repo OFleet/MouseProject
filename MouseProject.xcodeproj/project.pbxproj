@@ -11,6 +11,10 @@
 		37359FB315BCE7E0001C80C0 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */; };
 		37359FD015BD3A19001C80C0 /* foregroundTP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCE15BD3A19001C80C0 /* foregroundTP.plist */; };
 		37359FD115BD3A19001C80C0 /* foregroundTP.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCF15BD3A19001C80C0 /* foregroundTP.png */; };
+		37359FD415C26F19001C80C0 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD215C26F19001C80C0 /* background.plist */; };
+		37359FD515C26F19001C80C0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD315C26F19001C80C0 /* background.png */; };
+		37359FD815C2751E001C80C0 /* sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD615C2751E001C80C0 /* sprites.plist */; };
+		37359FD915C2751E001C80C0 /* sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD715C2751E001C80C0 /* sprites.png */; };
 		37DF1FD815B968AD00C5D86A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD715B968AD00C5D86A /* QuartzCore.framework */; };
 		37DF1FDA15B968AD00C5D86A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD915B968AD00C5D86A /* OpenGLES.framework */; };
 		37DF1FDC15B968AD00C5D86A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FDB15B968AD00C5D86A /* OpenAL.framework */; };
@@ -126,8 +130,6 @@
 		37DF213B15B968B000C5D86A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF213A15B968B000C5D86A /* AppDelegate.m */; };
 		37DF213E15B968B000C5D86A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF213D15B968B000C5D86A /* RootViewController.m */; };
 		37DF214115B968B000C5D86A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF214015B968B000C5D86A /* HelloWorldLayer.m */; };
-		37DF217215BCD34800C5D86A /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37DF217015BCD34700C5D86A /* background.plist */; };
-		37DF217315BCD34800C5D86A /* background.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 37DF217115BCD34800C5D86A /* background.pvr.ccz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +145,10 @@
 		37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d libraries.a"; path = "../../../../Downloads/WhackAMole/libcocos2d libraries.a"; sourceTree = "<group>"; };
 		37359FCE15BD3A19001C80C0 /* foregroundTP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = foregroundTP.plist; path = Resources/Art/foreground/foregroundTP.plist; sourceTree = "<group>"; };
 		37359FCF15BD3A19001C80C0 /* foregroundTP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foregroundTP.png; path = Resources/Art/foreground/foregroundTP.png; sourceTree = "<group>"; };
+		37359FD215C26F19001C80C0 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/Art/background/background.plist; sourceTree = "<group>"; };
+		37359FD315C26F19001C80C0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/Art/background/background.png; sourceTree = "<group>"; };
+		37359FD615C2751E001C80C0 /* sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = sprites.plist; path = Resources/Art/sprites/sprites.plist; sourceTree = "<group>"; };
+		37359FD715C2751E001C80C0 /* sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sprites.png; path = Resources/Art/sprites/sprites.png; sourceTree = "<group>"; };
 		37DF1FD315B968AD00C5D86A /* MouseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MouseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DF1FD715B968AD00C5D86A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		37DF1FD915B968AD00C5D86A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -378,8 +384,6 @@
 		37DF213F15B968B000C5D86A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		37DF214015B968B000C5D86A /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		37DF214215B968B000C5D86A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		37DF217015BCD34700C5D86A /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/Art/background/background.plist; sourceTree = "<group>"; };
-		37DF217115BCD34800C5D86A /* background.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.pvr.ccz; path = Resources/Art/background/background.pvr.ccz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,10 +501,12 @@
 		37DF1FE815B968AD00C5D86A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37359FD615C2751E001C80C0 /* sprites.plist */,
+				37359FD715C2751E001C80C0 /* sprites.png */,
+				37359FD215C26F19001C80C0 /* background.plist */,
+				37359FD315C26F19001C80C0 /* background.png */,
 				37359FCE15BD3A19001C80C0 /* foregroundTP.plist */,
 				37359FCF15BD3A19001C80C0 /* foregroundTP.png */,
-				37DF217015BCD34700C5D86A /* background.plist */,
-				37DF217115BCD34800C5D86A /* background.pvr.ccz */,
 				37DF1FE915B968AD00C5D86A /* Default.png */,
 				37DF1FEB15B968AD00C5D86A /* fps_images.png */,
 				37DF1FED15B968AD00C5D86A /* Icon-72.png */,
@@ -885,10 +891,12 @@
 				37DF1FF615B968AD00C5D86A /* Icon.png in Resources */,
 				37DF1FF815B968AD00C5D86A /* Icon@2x.png in Resources */,
 				37DF1FFB15B968AD00C5D86A /* iTunesArtwork in Resources */,
-				37DF217215BCD34800C5D86A /* background.plist in Resources */,
-				37DF217315BCD34800C5D86A /* background.pvr.ccz in Resources */,
 				37359FD015BD3A19001C80C0 /* foregroundTP.plist in Resources */,
 				37359FD115BD3A19001C80C0 /* foregroundTP.png in Resources */,
+				37359FD415C26F19001C80C0 /* background.plist in Resources */,
+				37359FD515C26F19001C80C0 /* background.png in Resources */,
+				37359FD815C2751E001C80C0 /* sprites.plist in Resources */,
+				37359FD915C2751E001C80C0 /* sprites.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1060,7 +1068,7 @@
 				GCC_PREFIX_HEADER = MouseProject/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = MouseProject/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/WhackAMole\"",
@@ -1083,7 +1091,7 @@
 				GCC_PREFIX_HEADER = MouseProject/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = MouseProject/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/WhackAMole\"",
