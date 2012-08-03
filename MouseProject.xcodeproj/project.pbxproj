@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		37359FB115BCE70D001C80C0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37359FB015BCE70D001C80C0 /* libz.dylib */; };
-		37359FB315BCE7E0001C80C0 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */; };
 		37359FD015BD3A19001C80C0 /* foregroundTP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCE15BD3A19001C80C0 /* foregroundTP.plist */; };
 		37359FD115BD3A19001C80C0 /* foregroundTP.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FCF15BD3A19001C80C0 /* foregroundTP.png */; };
 		37359FD415C26F19001C80C0 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD215C26F19001C80C0 /* background.plist */; };
 		37359FD515C26F19001C80C0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD315C26F19001C80C0 /* background.png */; };
 		37359FD815C2751E001C80C0 /* sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD615C2751E001C80C0 /* sprites.plist */; };
 		37359FD915C2751E001C80C0 /* sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FD715C2751E001C80C0 /* sprites.png */; };
+		37359FE915C2930E001C80C0 /* mole_laugh1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE215C2930D001C80C0 /* mole_laugh1.png */; };
+		37359FEA15C2930E001C80C0 /* mole_laugh2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE315C2930E001C80C0 /* mole_laugh2.png */; };
+		37359FEB15C2930E001C80C0 /* mole_laugh3.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE415C2930E001C80C0 /* mole_laugh3.png */; };
+		37359FEC15C2930E001C80C0 /* mole_thump1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE515C2930E001C80C0 /* mole_thump1.png */; };
+		37359FED15C2930E001C80C0 /* mole_thump2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE615C2930E001C80C0 /* mole_thump2.png */; };
+		37359FEE15C2930E001C80C0 /* mole_thump3.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE715C2930E001C80C0 /* mole_thump3.png */; };
+		37359FEF15C2930E001C80C0 /* mole_thump4.png in Resources */ = {isa = PBXBuildFile; fileRef = 37359FE815C2930E001C80C0 /* mole_thump4.png */; };
+		3735A01015CA56A1001C80C0 /* hitAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3735A00E15CA56A1001C80C0 /* hitAnim.plist */; };
+		3735A01115CA56A1001C80C0 /* laughAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3735A00F15CA56A1001C80C0 /* laughAnim.plist */; };
 		37DF1FD815B968AD00C5D86A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD715B968AD00C5D86A /* QuartzCore.framework */; };
 		37DF1FDA15B968AD00C5D86A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FD915B968AD00C5D86A /* OpenGLES.framework */; };
 		37DF1FDC15B968AD00C5D86A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF1FDB15B968AD00C5D86A /* OpenAL.framework */; };
@@ -142,13 +150,21 @@
 		37359FA615BCE458001C80C0 /* Cocos_2D_LibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cocos_2D_LibTests.h; sourceTree = "<group>"; };
 		37359FA715BCE458001C80C0 /* Cocos_2D_LibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cocos_2D_LibTests.m; sourceTree = "<group>"; };
 		37359FB015BCE70D001C80C0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d libraries.a"; path = "../../../../Downloads/WhackAMole/libcocos2d libraries.a"; sourceTree = "<group>"; };
 		37359FCE15BD3A19001C80C0 /* foregroundTP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = foregroundTP.plist; path = Resources/Art/foreground/foregroundTP.plist; sourceTree = "<group>"; };
 		37359FCF15BD3A19001C80C0 /* foregroundTP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foregroundTP.png; path = Resources/Art/foreground/foregroundTP.png; sourceTree = "<group>"; };
 		37359FD215C26F19001C80C0 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/Art/background/background.plist; sourceTree = "<group>"; };
 		37359FD315C26F19001C80C0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/Art/background/background.png; sourceTree = "<group>"; };
 		37359FD615C2751E001C80C0 /* sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = sprites.plist; path = Resources/Art/sprites/sprites.plist; sourceTree = "<group>"; };
 		37359FD715C2751E001C80C0 /* sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sprites.png; path = Resources/Art/sprites/sprites.png; sourceTree = "<group>"; };
+		37359FE215C2930D001C80C0 /* mole_laugh1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_laugh1.png; path = Resources/Art/sprites/mole_laugh1.png; sourceTree = "<group>"; };
+		37359FE315C2930E001C80C0 /* mole_laugh2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_laugh2.png; path = Resources/Art/sprites/mole_laugh2.png; sourceTree = "<group>"; };
+		37359FE415C2930E001C80C0 /* mole_laugh3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_laugh3.png; path = Resources/Art/sprites/mole_laugh3.png; sourceTree = "<group>"; };
+		37359FE515C2930E001C80C0 /* mole_thump1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_thump1.png; path = Resources/Art/sprites/mole_thump1.png; sourceTree = "<group>"; };
+		37359FE615C2930E001C80C0 /* mole_thump2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_thump2.png; path = Resources/Art/sprites/mole_thump2.png; sourceTree = "<group>"; };
+		37359FE715C2930E001C80C0 /* mole_thump3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_thump3.png; path = Resources/Art/sprites/mole_thump3.png; sourceTree = "<group>"; };
+		37359FE815C2930E001C80C0 /* mole_thump4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole_thump4.png; path = Resources/Art/sprites/mole_thump4.png; sourceTree = "<group>"; };
+		3735A00E15CA56A1001C80C0 /* hitAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hitAnim.plist; path = Resources/hitAnim.plist; sourceTree = "<group>"; };
+		3735A00F15CA56A1001C80C0 /* laughAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = laughAnim.plist; path = Resources/laughAnim.plist; sourceTree = "<group>"; };
 		37DF1FD315B968AD00C5D86A /* MouseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MouseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DF1FD715B968AD00C5D86A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		37DF1FD915B968AD00C5D86A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -400,7 +416,6 @@
 				37DF1FDC15B968AD00C5D86A /* OpenAL.framework in Frameworks */,
 				37359FB115BCE70D001C80C0 /* libz.dylib in Frameworks */,
 				37DF1FE015B968AD00C5D86A /* AVFoundation.framework in Frameworks */,
-				37359FB315BCE7E0001C80C0 /* libcocos2d libraries.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +462,6 @@
 		37DF1FC815B968AD00C5D86A = {
 			isa = PBXGroup;
 			children = (
-				37359FB215BCE7E0001C80C0 /* libcocos2d libraries.a */,
 				37359FB015BCE70D001C80C0 /* libz.dylib */,
 				37DF1FE715B968AD00C5D86A /* MouseProject */,
 				37359F8D15BCE457001C80C0 /* Cocos 2D Lib */,
@@ -501,6 +515,15 @@
 		37DF1FE815B968AD00C5D86A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3735A00E15CA56A1001C80C0 /* hitAnim.plist */,
+				3735A00F15CA56A1001C80C0 /* laughAnim.plist */,
+				37359FE215C2930D001C80C0 /* mole_laugh1.png */,
+				37359FE315C2930E001C80C0 /* mole_laugh2.png */,
+				37359FE415C2930E001C80C0 /* mole_laugh3.png */,
+				37359FE515C2930E001C80C0 /* mole_thump1.png */,
+				37359FE615C2930E001C80C0 /* mole_thump2.png */,
+				37359FE715C2930E001C80C0 /* mole_thump3.png */,
+				37359FE815C2930E001C80C0 /* mole_thump4.png */,
 				37359FD615C2751E001C80C0 /* sprites.plist */,
 				37359FD715C2751E001C80C0 /* sprites.png */,
 				37359FD215C26F19001C80C0 /* background.plist */,
@@ -897,6 +920,15 @@
 				37359FD515C26F19001C80C0 /* background.png in Resources */,
 				37359FD815C2751E001C80C0 /* sprites.plist in Resources */,
 				37359FD915C2751E001C80C0 /* sprites.png in Resources */,
+				37359FE915C2930E001C80C0 /* mole_laugh1.png in Resources */,
+				37359FEA15C2930E001C80C0 /* mole_laugh2.png in Resources */,
+				37359FEB15C2930E001C80C0 /* mole_laugh3.png in Resources */,
+				37359FEC15C2930E001C80C0 /* mole_thump1.png in Resources */,
+				37359FED15C2930E001C80C0 /* mole_thump2.png in Resources */,
+				37359FEE15C2930E001C80C0 /* mole_thump3.png in Resources */,
+				37359FEF15C2930E001C80C0 /* mole_thump4.png in Resources */,
+				3735A01015CA56A1001C80C0 /* hitAnim.plist in Resources */,
+				3735A01115CA56A1001C80C0 /* laughAnim.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

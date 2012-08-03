@@ -15,6 +15,14 @@
    
     
     NSMutableArray *moles;
+    CCAnimation *laughAnim;
+    CCAnimation *hitAnim;
+    
+    CCLabelTTF *label;
+    int score;
+    int totalSpawns;
+    BOOL gameOver;
+    
     
 }
 

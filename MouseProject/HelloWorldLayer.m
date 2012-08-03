@@ -28,24 +28,127 @@
 	return scene;
 }
 
-- (void) popMole:(CCSprite *)mole {          
-    CCMoveBy *moveUp = [CCMoveBy actionWithDuration:0.2 position:ccp(0, mole.contentSize.height)]; // 1
-    CCEaseInOut *easeMoveUp = [CCEaseInOut actionWithAction:moveUp rate:3.0]; // 2
-    CCAction *easeMoveDown = [easeMoveUp reverse]; // 3
-    CCDelayTime *delay = [CCDelayTime actionWithDuration:0.7]; // 4
-    
-    [mole runAction:[CCSequence actions:easeMoveUp, delay, easeMoveDown, nil]]; // 5
+
+- (CCAnimation *)animationFromPlist:(NSString *)animPlist delay:(float)delay {
+    NSLog(@"В методе animationFromPlist.");
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:animPlist ofType:@"plist"]; // 1
+    NSArray *animImages = [NSArray arrayWithContentsOfFile:plistPath]; // 2
+    NSMutableArray *animFrames = [NSMutableArray array]; // 3
+        
+    for(NSString *animImage in animImages) { // 4
+        NSLog(@"В цикле.");
+        [animFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:animImage]]; // 5
+    }
+    return [CCAnimation animationWithFrames:animFrames delay:delay]; // 6
+    NSLog(@"Конец метода animationFromPlist.");
 }
 
+-(void) registerWithTouchDispatcher
+{
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:kCCMenuTouchPriority swallowsTouches:NO];
+}
+
+-(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{ 
+    CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
+    for (CCSprite *mole in moles) {
+        if (mole.userData == FALSE) continue;
+        if (CGRectContainsPoint(mole.boundingBox, touchLocation)) {
+            
+            mole.userData = FALSE;            
+            score+= 10;
+            
+            [mole stopAllActions];
+            CCAnimate *hit = [CCAnimate actionWithAnimation:hitAnim restoreOriginalFrame:NO];
+            CCMoveBy *moveDown = [CCMoveBy actionWithDuration:0.8 position:ccp(0, -mole.contentSize.height)];
+            CCEaseInOut *easeMoveDown = [CCEaseInOut actionWithAction:moveDown rate:3.0];
+            [mole runAction:[CCSequence actions:hit, easeMoveDown, nil]];
+        }
+    }    
+    return TRUE;
+}
+
+- (void)setTappable:(id)sender {
+    CCSprite *mole = (CCSprite *)sender;    
+    [mole setUserData:TRUE];
+}
+
+
+- (void)unsetTappable:(id)sender {
+    CCSprite *mole = (CCSprite *)sender;
+    [mole setUserData:FALSE];
+}
+
+
+
+- (void) popMole:(CCSprite *)mole {
+    NSLog(@"В методе popMole.");
+ 
+    if (totalSpawns > 50) return;
+    totalSpawns++;
+    
+    [mole setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"mole_1.png"]];
+    
+    
+    CCMoveBy *moveUp = [CCMoveBy actionWithDuration:0.2 position:ccp(0, mole.contentSize.height)]; // 1
+    CCCallFunc *setTappable = [CCCallFuncN actionWithTarget:self selector:@selector(setTappable:)];
+    CCEaseInOut *easeMoveUp = [CCEaseInOut actionWithAction:moveUp rate:3.0]; // 2
+    //CCDelayTime *delay = [CCDelayTime actionWithDuration:0.7]; // 4
+    
+    CCAnimate *laugh = [CCAnimate actionWithAnimation:laughAnim restoreOriginalFrame:YES];
+    
+    CCCallFunc *unsetTappable = [CCCallFuncN actionWithTarget:self selector:@selector(unsetTappable:)];  
+    CCAction *easeMoveDown = [easeMoveUp reverse]; // 3
+    
+    [mole runAction:[CCSequence actions:easeMoveUp, setTappable, laugh, unsetTappable, easeMoveDown, nil]]; // 5
+    
+    NSLog(@"Конец метода popMole.");
+}
+
+
+- (float)convertFontSize:(float)fontSize {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return fontSize * 2;
+    } else {
+        return fontSize;
+    }
+}
+
+
 - (void)tryPopMoles:(ccTime)dt {
+    
+    if (gameOver) return;
+    
+    [label setString:[NSString stringWithFormat:@"Score: %d", score]];
+    
+    if (totalSpawns >= 50) {
+        
+        CGSize winSize = [CCDirector sharedDirector].winSize;
+        CCLabelTTF *goLabel = [CCLabelTTF labelWithString:@"Level Complete!" fontName:@"Verdana" fontSize:[self convertFontSize:48.0]];
+       
+        goLabel.position = ccp(winSize.width/2, winSize.height/2);
+        goLabel.scale = 0.1;
+        [self addChild:goLabel z:10];                
+        [goLabel runAction:[CCScaleTo actionWithDuration:0.5 scale:1.0]];
+        
+        gameOver = true;
+        return;
+        
+    }
+    
+    
     for (CCSprite *mole in moles) {            
-        if (arc4random() % 7 == 0) {
+        if (arc4random() % 5 == 0) {
             if (mole.numberOfRunningActions == 0) {
                 [self popMole:mole];
             }
         }
     }     
 }
+
+
+
+
 
 -(id) init
 {
@@ -82,9 +185,8 @@
         [self addChild:upper z:-1];
         
         
-        
-        
         [self schedule:@selector(tryPopMoles:) interval:0.5];
+        NSLog(@"Вызов метода tryPopMoles.");
         
         NSString *sSheet = @"sprites.png";
         NSString *sPlist = @"sprites.plist";
@@ -110,7 +212,23 @@
         [spriteNode addChild:mole3];
         [moles addObject:mole3];
         
-                
+        
+        
+        laughAnim = [self animationFromPlist:@"laughAnim" delay:0.1];   
+        NSLog(@"Вызов метода animationFromPlist laughAnim."); 
+        hitAnim = [self animationFromPlist:@"hitAnim" delay:0.02];
+        NSLog(@"Вызов метода animationFromPlist hitAnim.");
+        [[CCAnimationCache sharedAnimationCache] addAnimation:laughAnim name:@"laughAnim"];
+        [[CCAnimationCache sharedAnimationCache] addAnimation:hitAnim name:@"hitAnim"];
+        
+        self.isTouchEnabled = YES;
+        
+        float margin = 10;
+        label = [CCLabelTTF labelWithString:@"Score: 0" fontName:@"Verdana" fontSize:[self convertFontSize:14.0]];
+        label.anchorPoint = ccp(1, 0);
+        label.position = ccp(winSize.width - margin, margin);
+        [self addChild:label z:10];
+        
         }
     
 	return self;
