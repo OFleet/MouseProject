@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "SimpleAudioEngine.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -55,6 +56,7 @@
         if (mole.userData == FALSE) continue;
         if (CGRectContainsPoint(mole.boundingBox, touchLocation)) {
             
+            [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
             mole.userData = FALSE;            
             score+= 10;
             
@@ -69,6 +71,7 @@
 }
 
 - (void)setTappable:(id)sender {
+    [[SimpleAudioEngine sharedEngine] playEffect:@"laugh.caf"];
     CCSprite *mole = (CCSprite *)sender;    
     [mole setUserData:TRUE];
 }
@@ -154,6 +157,10 @@
 {
 	if( (self=[super init])) {
 		
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"laugh.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"ow.caf"];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"whack.caf" loop:YES];
+        
         [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];        
         CGSize winSize = [CCDirector sharedDirector].winSize;
         
