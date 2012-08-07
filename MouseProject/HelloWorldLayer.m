@@ -10,9 +10,17 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "SimpleAudioEngine.h"
+#import "Hud.h"
+
+
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
+
+
+@synthesize healthGeneral;
+
+
 
 +(CCScene *) scene
 {
@@ -27,6 +35,12 @@
 	
 	// return the scene
 	return scene;
+}
+
+
+-(bool) isDead
+{
+    return healthGeneral <= 0.0f;
 }
 
 
@@ -59,6 +73,7 @@
             [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
             mole.userData = FALSE;            
             score+= 10;
+            healthGeneral-=10;
             
             [mole stopAllActions];
             CCAnimate *hit = [CCAnimate actionWithAnimation:hitAnim restoreOriginalFrame:NO];
@@ -73,7 +88,8 @@
 - (void)setTappable:(id)sender {
     [[SimpleAudioEngine sharedEngine] playEffect:@"laugh.caf"];
     CCSprite *mole = (CCSprite *)sender;    
-    [mole setUserData:TRUE];
+    [mole setUserData:YES];
+    
 }
 
 
@@ -86,8 +102,9 @@
 
 - (void) popMole:(CCSprite *)mole {
     NSLog(@"В методе popMole.");
- 
-    if (totalSpawns > 50) return;
+    
+    
+    if (totalSpawns > 15) return;
     totalSpawns++;
     
     [mole setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"mole_1.png"]];
@@ -123,8 +140,25 @@
     if (gameOver) return;
     
     [label setString:[NSString stringWithFormat:@"Score: %d", score]];
+     
     
-    if (totalSpawns >= 50) {
+    
+    if (healthGeneral <= 0) {
+        
+        CGSize winSize = [CCDirector sharedDirector].winSize;
+        CCLabelTTF *goLabel = [CCLabelTTF labelWithString:@"Game Over!" fontName:@"Verdana" fontSize:[self convertFontSize:48.0]];
+        
+        goLabel.position = ccp(winSize.width/2, winSize.height/2);
+        goLabel.scale = 0.1;
+        [self addChild:goLabel z:10];                
+        [goLabel runAction:[CCScaleTo actionWithDuration:0.5 scale:1.0]];
+        
+        gameOver = true;
+        return;
+        
+    }
+    
+    if (totalSpawns >= 15) {
         
         CGSize winSize = [CCDirector sharedDirector].winSize;
         CCLabelTTF *goLabel = [CCLabelTTF labelWithString:@"Level Complete!" fontName:@"Verdana" fontSize:[self convertFontSize:48.0]];
@@ -163,6 +197,18 @@
         
         [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];        
         CGSize winSize = [CCDirector sharedDirector].winSize;
+        
+        
+        // set health
+        healthGeneral = HUMAN_MAX_HEALTH;
+        NSLog(@"init healthGeneral = %f",healthGeneral);
+        NSLog(@"init HUMAN_MAX_HEALTH = %f",HUMAN_MAX_HEALTH);
+        
+        
+        // add hud
+        hud = [[[Hud alloc] init] autorelease];
+        [self addChild:hud z:10000];
+        
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"background.plist"];
         CCSprite *background = [CCSprite spriteWithSpriteFrameName:@"bg_dirt.png"];
@@ -236,9 +282,23 @@
         label.position = ccp(winSize.width - margin, margin);
         [self addChild:label z:10];
         
-        }
+        
+        [self schedule: @selector(update:) interval:0.5];
+    
+    
+    }
     
 	return self;
+}
+
+
+-(void) update: (ccTime) dt
+{
+        
+    // show human's health in tokens on layer
+    [hud setHealth:healthGeneral];
+    
+    
 }
 
 
